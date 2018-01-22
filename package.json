@@ -1,0 +1,19 @@
+{
+  "name": "movielogue",
+  "version": "0.0.1",
+  "description": "A Node.JS/MongoDB app for cataloging Your Physical and Digital movie collection",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "grunt": "^1.0.1",
+    "mongodb": "^3.0.1",
+    "pug": "^2.0.0-rc.4",
+    "sass": "^1.0.0-beta.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alan Camuto",
+  "license": "ISC"
+}
