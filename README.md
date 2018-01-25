@@ -1,2 +1,2 @@
 # MovieLogue
-DVD Cataloging app built in Node.JS using MongoDB, Express, and Bootstrap
+DVD Cataloging app built in Node.JS using MySQL, Express, and Bootstrap
