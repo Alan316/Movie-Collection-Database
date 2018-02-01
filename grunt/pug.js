@@ -3,8 +3,7 @@ module.exports = {
     prod: {
         files: [{
             expand: true,
-            cwd: 'views',
-            src: ['*.pug'],
+            src: ['views/*.pug',],
             dest: 'public/html',
             ext: '.html'
         }]

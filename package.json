@@ -14,7 +14,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-sass": "^2.0.0",
     "load-grunt-config": "^0.19.2",
-    "mysql": "^2.15.0",
+    "mongodb": "^3.0.2",
     "pug": "^2.0.0-rc.4"
   },
   "devDependencies": {
