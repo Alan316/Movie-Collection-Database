@@ -23,7 +23,7 @@ module.exports = {
             expand: true,
             cwd: 'src/sass',
             src: ['*.scss'],
-            dest: 'dist/css',
+            dest: 'public/css',
             ext: '.css'
         }]
     }

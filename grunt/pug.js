@@ -1,11 +1,13 @@
 module.exports = {
     // Production settings
     prod: {
+        options: { pretty: true },
         files: [{
             expand: true,
-            src: ['views/*.pug',],
+            cwd: 'views',
+            src: ['*.pug',],
             dest: 'public/html',
-            ext: '.html'
+            ext: '.html',
         }]
     }
 };

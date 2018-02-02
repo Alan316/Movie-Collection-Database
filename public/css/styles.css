@@ -1,3 +1,48 @@
+.white-space {
+  white-space: pre; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+.container-fluid {
+  padding: 0;
+  margin: 0; }
+
+#bg {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.bgwidth {
+  width: 100%; }
+
+.bgheight {
+  height: 100%; }
+
+.navbar {
+  background-color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.navbar-logo {
+  max-width: 20%;
+  max-height: 20%; }
+
+.navbar-brand {
+  font-family: Passion One, Arial, Helvetica, sans-serif;
+  font-size: 2rem; }
+
+.navbar-brand {
+  padding: 0;
+  margin: 0; }
+
+.nav-link {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-weight: 800; }
+
 h1 {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   color: #8b0000;

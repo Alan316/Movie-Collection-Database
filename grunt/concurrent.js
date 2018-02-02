@@ -26,7 +26,8 @@ module.exports = {
         'uglify'
     ],
     prodThird: [
-        'pug'
+        'pug',
+        'uglify'
     ],
 
     // Image tasks
