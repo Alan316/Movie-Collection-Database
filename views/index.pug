@@ -1,7 +1,8 @@
 doctype 
-html    
+html(id='random')   
     head
-         include templates/header-template.pug
-    body
-        img#bg.bgwidth.bgheight(src="movie-background5.jpg")
+        include templates/header-template.pug
+    body(onLoad='RandomImage()')
         include templates/navbar-nologin-template.pug
+    footer
+        include templates/footer-template.pug
