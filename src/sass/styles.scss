@@ -4,42 +4,59 @@ $font-stack: Roboto, Arial, Helvetica, sans-serif;
 $font-bold: 800;
 
 $red: #8b0000;
-$blue: #0000FF;
+$blue: #00008b;
 $white: #FFFFFF;
 $grey-dark: #262626;
 $grey: #B3B3B3;
 $black: #000000;
+
+.blue{
+    color:$blue!important;
+}
+.centerText{
+    text-align:center;
+    padding: 10px;
+}
 
 .white-space {
     white-space:pre;
 }
 body {
     margin: 0;
-    padding: 0;
+    padding: 0x;
 }
 #random {
   width:100%;
-  height:100%;
+  height:100vh;
   background-image:url('');
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;  
+}
+.h1 {
+    font-family: $font-stack;
+    font-weight: $font-bold;
+    display: block;
+}
+.h2 {
+     font-family: $font-stack;
+    font-weight: $font-bold;
+    display: block;
+}
+.h5 {
+   font-family: $font-logo;
+   font-weight: $font-bold;
+   display: block;
 }
 .container-fluid {
     padding:0; //Remove padding from bootstrap 4 fluid navbar
     margin:0;
 }
-/*#bg {
-     position: fixed; 
-     top: 0; 
-     left: 0; }
-.bgwidth { width: 100%; }
-.bgheight { height: 100%; }*/
-//site navigation
+//Navbar Styles
 .navbar{
     background-color: $white;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 0px;
     padding-top:0;
     padding-bottom:0;
 }
@@ -59,9 +76,47 @@ body {
     font-family: $font-stack;
     font-weight: $font-bold;
 }
-//end of Navigation
-h1 {
-    font-family: $font-stack;
-    color: $red;
-    font-size: 50px;
+//End of Navigation
+//Login Window
+.containerLogin{
+    margin: 0;
+    position: absolute;               
+    top: 50%;                         
+    transform: translate(0, -50%); 
+} 
+.loginBox{
+    width: 100%;
+    text-align:center;
+    padding:10px;
+    font-weight: $font-bold;
+    position: absolute;               
+    top: 50%;                         
+    transform: translate(0, -50%); 
+    font-size:2em;
+}
+.loginBoxOuter{
+    padding:5px;
+    max-width:543px;
+    min-width:302px;
+    background-color: $white;
+    margin:0 auto;
+    border-radius: 15px;
+}
+.loginBoxInner{
+    padding:10px;
+    max-width:540px;
+    min-width:300px;
+    background-color: $white;
+    border-radius: 15px;
+    border:3px solid $grey;
+}
+.form-group{
+    padding-top:15px;
+    padding-bottom:0;
+}
+//End of Login Windows
+//Various BNootstrap Overides
+.btn-primary{
+    background-color: #00008b;
+    border-color: #00008b;
 }

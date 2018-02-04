@@ -1,8 +1,21 @@
 doctype 
-html(id='random')   
+html  
     head
         include templates/header-template.pug
-    body(onLoad='RandomImage()')
+    body(onLoad='RandomImage()') 
         include templates/navbar-nologin-template.pug
+
+        div.containerFluid
+            div.containerLogin#random
+                div.loginBox.centerText
+                    div.loginBoxOuter
+                        div.loginBoxInner
+                            h5.blue Track your physical and digital film collection.
+                                div.form-group
+                                        label(for='username') 
+                                            input.form-control(type='text' id='username' placeholder='User Name' name='username')
+                                        label(for='password')
+                                            input.form-control(type='password' id='password' placeholder='Password' name='password')
+                                button.btn.btn-primary(type='submit') Log in
     footer
         include templates/footer-template.pug
