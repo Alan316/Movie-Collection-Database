@@ -1,7 +1,5 @@
 # MovieLogue
-DVD and digital film collection cataloging app built in Node.JS using MongoDB, Express, and Bootstrap
-
-
+DVD and digital film collection cataloging app built in Node.JS using MongoDB, Express, and Bootstrap 4.0 with my customized edits
 
 I hope to achieve the following functionality within this website. : 
 ⋅⋅
