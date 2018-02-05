@@ -23,3 +23,5 @@ I hope to achieve the following functionality within this website. :
 
 
 I'm using this project to learn MongoDB and Node.JS while also organizing my movie collection
+
+I'd like to also host this app on a free survice for review purposes. If anyone knows of a free Node.JS hosting service, please feel free to suggest it. 
