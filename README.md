@@ -8,7 +8,8 @@ I hope to achieve the following functionality within this website. :
 1. Give users the ability to register witht he site and create a new account. 
 
 2. Users will be able to create a personal databse of films they own. The database shoulds contain the following information:
-  ⋅a. Title of film
+  ⋅⋅
+  a. Title of film
   b. Year produced
   c. Format of film that is wned (DVD/Blu Ray/HD DVD/VHS/Beta Max/Digital) - Site should allow for multiple selections
   d. Main Actors featured in the film
