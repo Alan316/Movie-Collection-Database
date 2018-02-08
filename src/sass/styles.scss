@@ -4,26 +4,37 @@ $font-stack: Roboto, Arial, Helvetica, sans-serif;
 $font-bold: 800;
 
 $red: #8b0000;
-$blue: #00008b;
+$blue: #104e8b;
 $white: #FFFFFF;
 $grey-dark: #262626;
 $grey: #B3B3B3;
 $black: #000000;
 
+//color classes
 .blue{
-    color:$blue!important;
+    color: $blue!important;
+}
+.bgWhite{
+    background-color:$white;
+}
+//color classes end
+.fontBold{
+    font-weight: $font-bold;
 }
 .centerText{
     text-align:center;
     padding: 10px;
 }
-
+.container {
+    max-width:1140px;
+}
 .white-space {
     white-space:pre;
 }
 body {
     margin: 0;
     padding: 0x;
+    font-family: $font-stack;
 }
 #random {
   width:100%;
@@ -33,19 +44,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;  
 }
-.h1 {
-    font-family: $font-stack;
-    font-weight: $font-bold;
-    display: block;
-}
-.h2 {
-     font-family: $font-stack;
-    font-weight: $font-bold;
-    display: block;
-}
 .h5 {
-   font-family: $font-logo;
-   font-weight: $font-bold;
+   font-family: $font-logo !important;
+   font-weight: $font-bold !important;
    display: block;
 }
 .container-fluid {
@@ -53,6 +54,12 @@ body {
     margin:0;
 }
 //Navbar Styles
+a{
+    color: $blue;
+}
+a:hover{
+    color:$grey;
+}
 .navbar{
     background-color: $white;
     margin-top: 0;
@@ -65,16 +72,19 @@ body {
     max-height:20%;
 }
 .navbar-brand{
-    font-family: $font-logo;
-    font-size: $font-size-logo;
+    font-family: $font-logo !important;
+    font-size: $font-size-logo !important;
 }
 .navbar-brand{
     padding:0;
     margin:0;
 }
 .nav-link{
-    font-family: $font-stack;
     font-weight: $font-bold;
+    color: $blue;
+}
+.navlink:hover{
+    color: $grey;
 }
 //End of Navigation
 //Login Window
@@ -115,8 +125,12 @@ body {
     padding-bottom:0;
 }
 //End of Login Windows
-//Various BNootstrap Overides
+//Buttons
 .btn-primary{
-    background-color: #00008b;
-    border-color: #00008b;
+    background-color: $blue;
+    border-color: $blue;
+}
+.btn-primary:hover{
+    background-color: $grey;
+    border-color: $grey;
 }

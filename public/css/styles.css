@@ -1,16 +1,26 @@
 .blue {
-  color: #00008b !important; }
+  color: #104e8b !important; }
+
+.bgWhite {
+  background-color: #FFFFFF; }
+
+.fontBold {
+  font-weight: 800; }
 
 .centerText {
   text-align: center;
   padding: 10px; }
+
+.container {
+  max-width: 1140px; }
 
 .white-space {
   white-space: pre; }
 
 body {
   margin: 0;
-  padding: 0x; }
+  padding: 0x;
+  font-family: Roboto, Arial, Helvetica, sans-serif; }
 
 #random {
   width: 100%;
@@ -20,24 +30,20 @@ body {
   background-size: cover;
   background-repeat: no-repeat; }
 
-.h1 {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-weight: 800;
-  display: block; }
-
-.h2 {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-weight: 800;
-  display: block; }
-
 .h5 {
-  font-family: Passion One, Arial, Helvetica, sans-serif;
-  font-weight: 800;
+  font-family: Passion One, Arial, Helvetica, sans-serif !important;
+  font-weight: 800 !important;
   display: block; }
 
 .container-fluid {
   padding: 0;
   margin: 0; }
+
+a {
+  color: #104e8b; }
+
+a:hover {
+  color: #B3B3B3; }
 
 .navbar {
   background-color: #FFFFFF;
@@ -51,16 +57,19 @@ body {
   max-height: 20%; }
 
 .navbar-brand {
-  font-family: Passion One, Arial, Helvetica, sans-serif;
-  font-size: 2rem; }
+  font-family: Passion One, Arial, Helvetica, sans-serif !important;
+  font-size: 2rem !important; }
 
 .navbar-brand {
   padding: 0;
   margin: 0; }
 
 .nav-link {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-weight: 800; }
+  font-weight: 800;
+  color: #104e8b; }
+
+.navlink:hover {
+  color: #B3B3B3; }
 
 .containerLogin {
   margin: 0;
@@ -99,7 +108,11 @@ body {
   padding-bottom: 0; }
 
 .btn-primary {
-  background-color: #00008b;
-  border-color: #00008b; }
+  background-color: #104e8b;
+  border-color: #104e8b; }
+
+.btn-primary:hover {
+  background-color: #B3B3B3;
+  border-color: #B3B3B3; }
 
 /*# sourceMappingURL=styles.css.map */

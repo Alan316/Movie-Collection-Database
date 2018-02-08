@@ -10,12 +10,15 @@ html
                 div.loginBox.centerText
                     div.loginBoxOuter
                         div.loginBoxInner
-                            h5.blue Track your physical and digital film collection.
+                            h5.grey-dark Track your physical and digital film collection.
                                 div.form-group
                                         label(for='username') 
                                             input.form-control(type='text' id='username' placeholder='User Name' name='username')
                                         label(for='password')
                                             input.form-control(type='password' id='password' placeholder='Password' name='password')
                                 button.btn.btn-primary(type='submit') Log in
+                                p
+                                    h5.grey-dark Not a member? 
+                                    h5.grey-dark <a class="fontBold" href="#" >Register</a> for free and start tracking your database today!
     footer
         include templates/footer-template.pug
