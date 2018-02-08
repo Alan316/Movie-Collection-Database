@@ -11,15 +11,9 @@ function RandomImage()
     "url('movie-background6.jpg')",
     "url('movie-background7.jpg')",
     "url('movie-background8.jpg')",];
+  //Removed images for cell phone. No reason to Have Them. Grey is displayed in background now.
   var smallImage= 
-    ["url('mobile-background1.jpg')",
-    "url('mobile-background2.jpg')",
-    "url('mobile-background3.jpg')",
-    "url('mobile-background4.jpg')",
-    "url('mobile-background5.jpg')",
-    "url('mobile-background6.jpg')",
-    "url('mobile-background7.jpg')",
-    "url('mobile-background8.jpg')",];
+    "";
 
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
     document.getElementById("random").style.backgroundImage=smallImage[random];

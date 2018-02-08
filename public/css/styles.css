@@ -20,6 +20,7 @@
 body {
   margin: 0;
   padding: 0x;
+  background-color: #B3B3B3;
   font-family: Roboto, Arial, Helvetica, sans-serif; }
 
 #random {
@@ -58,7 +59,8 @@ a:hover {
 
 .navbar-brand {
   font-family: Passion One, Arial, Helvetica, sans-serif !important;
-  font-size: 2rem !important; }
+  font-size: 2rem !important;
+  width: 250px; }
 
 .navbar-brand {
   padding: 0;

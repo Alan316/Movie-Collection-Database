@@ -34,6 +34,7 @@ $black: #000000;
 body {
     margin: 0;
     padding: 0x;
+    background-color: $grey;
     font-family: $font-stack;
 }
 #random {
@@ -74,6 +75,7 @@ a:hover{
 .navbar-brand{
     font-family: $font-logo !important;
     font-size: $font-size-logo !important;
+    width:250px;
 }
 .navbar-brand{
     padding:0;
