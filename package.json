@@ -14,13 +14,19 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-sass": "^2.0.0",
     "load-grunt-config": "^0.19.2",
-    "mongodb": "^3.0.2",
     "pug": "^2.0.0-rc.4"
   },
   "devDependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "connect-mongo": "^2.0.1",
+    "express-session": "^1.15.6",
     "grunt": "^1.0.1",
     "jshint-stylish": "^2.2.1",
+    "mongodb": "^3.0.2",
+    "mongoose": "^5.0.4",
     "node-sass": "^4.7.2",
+    "nodemon": "^1.14.12",
     "python": "0.0.4",
     "time-grunt": "^1.4.0"
   },
