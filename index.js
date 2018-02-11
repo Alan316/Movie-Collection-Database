@@ -21,9 +21,6 @@ client.close();
 //Mongoose
 var mongoDB = 'mongodb://localhost/TEST';
 mongoose.connect(mongoDB);
-// Get Mongoose to use the global promise library
-mongoose.Promise = global.Promise;
-//Get the default connection
 var db = mongoose.connection;
 //Error Handling with Mongoose
 db.on('error', console.error.bind(console, 'connection error'));
@@ -31,16 +28,50 @@ db.once('open', function() {
     console.log ("The Mongoose is connected");
 });
 
+
+//use sessions for tracking logins
+app.use(session({
+    secret: 'work hard',
+    resave: true,
+    saveUninitialized: false,
+    store: new MongoStore({
+      mongooseConnection: db
+    })
+  }));
+
+// parse incoming requests
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// serve static files from template
+app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public/css'));
+app.use(express.static(__dirname + '/public/js'));
+app.use(express.static(__dirname + '/public/images'));
+
+// include routes
+var routes = require('./routes/router');
+app.use('/', routes);
+
+// catch 404 and forward to error handler
+/*app.use(function (req, res, next) {
+  var err = new Error('File Not Found');
+  err.status = 404;
+  next(err);
+});*/
+
 //Static Files
-app.use('/', express.static('public/'));
+/*app.use('/', express.static('public/'));
 app.use('/', express.static('public/html'));
 app.use('/', express.static('public/css'));
 app.use('/', express.static('public/images'));
 app.use('/', express.static('public/js'));
 app.use('/', express.static('public/userprofile'));
-app.use('/', express.static('db'));
+app.use('/', express.static('model/'));
+app.use('/', express.static('db'));*/
 
 
 app.get('/',(req,res) => res.sendFile('/index.html'));
-app.listen(3000, () => console.log('This is working!'));
-
+app.listen(3000, function() {
+    console.log('This is working!');
+});

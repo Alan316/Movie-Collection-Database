@@ -31,3 +31,4 @@ function loadRegister() {
   document.getElementById('loadRegister').classList.remove('show');
   document.getElementById('loadRegister').classList.add('show');
 }
+
