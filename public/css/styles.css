@@ -109,6 +109,12 @@ a:hover {
   padding-top: 15px;
   padding-bottom: 0; }
 
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
 .btn-primary {
   background-color: #104e8b;
   border-color: #104e8b; }

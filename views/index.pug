@@ -5,20 +5,46 @@ html
     body(onLoad='RandomImage()') 
         include templates/navbar-nologin-template.pug
 
-        div.containerFluid
+        div.containerFluid.show#loadLogin
             div.containerLogin#random
                 div.loginBox.centerText
                     div.loginBoxOuter
                         div.loginBoxInner
                             h5.grey-dark Track your physical and digital film collection.
                                 div.form-group
+                                    form(action='/' method="post")
                                         label(for='username') 
-                                            input.form-control(type='text' id='username' placeholder='User Name' name='username')
+                                            input.form-control(type='text' id='logemail' placeholder='User Name' name='username')
                                         label(for='password')
-                                            input.form-control(type='password' id='password' placeholder='Password' name='password')
-                                button.btn.btn-primary(type='submit') Log in
+                                            input.form-control(type='password' id='logpassword' placeholder='Password' name='password')
+                                button.btn.btn-primary(type='submit') Login
                                 p
                                     h5.grey-dark Not a member? 
-                                    h5.grey-dark <a class="fontBold" href="#" >Register</a> for free and start tracking your collection today!
+                                    h5.grey-dark <a class="fontBold" href="#" onClick='loadRegister()'>Register</a> for free and start tracking your collection today!
+
+                        
+        div.containerFluid.hide#loadRegister
+            div.containerLogin#random
+                div.loginBox.centerText
+                    div.loginBoxOuter
+                        div.loginBoxInner
+                            h5.grey-dark Complete this form to register for MovieLogue
+                                div.form-group
+                                    form(action='/' method="post")
+                                        label(for='email') 
+                                            input.form-control(type='text' name='email' placeholder='E-mail' size='35')
+                                        br
+                                        label(for='username')
+                                            input.form-control(type='username'  name='username' placeholder='Username' size='35')
+                                        br
+                                        label(for='password')
+                                            input.form-control(type='password'  name='password' placeholder='Password' size='35')
+                                        br
+                                        label(for='password')
+                                            input.form-control(type='password' name='passwordConf' placeholder='Confirm Password' size='35')
+                                button.btn.btn-primary(type='submit') Register
+                                p
+                                    h5.grey-dark Already a Member? <a class="fontBold" href="#" onClick='loadLogin()'>Login Here!</a>
+
     footer
         include templates/footer-template.pug

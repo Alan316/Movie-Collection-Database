@@ -6,7 +6,7 @@ module.exports = {
             expand: true,
             cwd: 'views',
             src: ['*.pug',],
-            dest: 'public/html',
+            dest: 'public/',
             ext: '.html',
         }]
     }
