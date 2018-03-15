@@ -12,7 +12,7 @@
   </head>
   <body onLoad="RandomImage()"> 
     <nav class="navbar navbar-expand-md fixed-top navbar-light">
-      <div class="container"><a class="navbar-brand white-space" href="#"><img class="navbar-logo" src="filmstrip.png"><span class="blue"> MovieLogue</span></a>
+      <div class="container"><a class="navbar-brand white-space" href="#"><img class="navbar-logo" src="ML_Logo.jpg"></a>
         <button class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbar-nologin-content" aria-controls="navbarContent" aria-expanded="true" aria-label="Toggle navigation"><span class="navbar-toggler-icon navbar-light"></span></button>
         <div class="collapse navbar-collapse" id="navbar-nologin-content">
           <ul class="navbar-nav ml-auto">
@@ -31,10 +31,10 @@
                 <div class="form-group">
                   <form action="/" method="post">
                     <label for="username"> 
-                      <input class="form-control" type="text" id="logemail" placeholder="User Name" name="username">
+                      <input class="form-control" type="text" id="logemail" placeholder="User Name" name="logemail">
                     </label>
                     <label for="password">
-                      <input class="form-control" type="password" id="logpassword" placeholder="Password" name="password">
+                      <input class="form-control" type="password" id="logpassword" placeholder="Password" name="logpassword">
                     </label><br>
                     <button class="btn btn-primary" type="submit">Login</button>
                   </form>
@@ -57,6 +57,7 @@
               <h5 class="grey-dark">Complete this form to register for MovieLogue
                 <div class="form-group">
                   <form action="/" method="post">
+                    <p id="errorMesage"></p>
                     <label for="email"> 
                       <input class="form-control" type="text" name="email" placeholder="E-mail" size="35">
                     </label><br>

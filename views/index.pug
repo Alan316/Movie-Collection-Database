@@ -14,9 +14,9 @@ html
                                 div.form-group
                                     form(action='/' method="post")
                                         label(for='username') 
-                                            input.form-control(type='text' id='logemail' placeholder='User Name' name='username')
+                                            input.form-control(type='text' id='logemail' placeholder='User Name' name='logemail')
                                         label(for='password')
-                                            input.form-control(type='password' id='logpassword' placeholder='Password' name='password')
+                                            input.form-control(type='password' id='logpassword' placeholder='Password' name='logpassword')
                                         br
                                         button.btn.btn-primary(type='submit') Login
                                 p
@@ -32,6 +32,7 @@ html
                             h5.grey-dark Complete this form to register for MovieLogue
                                 div.form-group
                                     form(action='/' method="post")
+                                        p#errorMesage
                                         label(for='email') 
                                             input.form-control(type='text' name='email' placeholder='E-mail' size='35')
                                         br

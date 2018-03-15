@@ -1,14 +1,12 @@
 var express = require('express');
-var app = require('express');
 var router = express.Router();
+var path = require('path');
 var User = require('../models/user');
-
 
 // GET route for reading data
 router.get('/', function (req, res, next) {
   return res.sendFile(path.join(__dirname + 'index.html'));
 });
-
 
 //POST route for updating data
 router.post('/', function (req, res, next) {
@@ -16,8 +14,7 @@ router.post('/', function (req, res, next) {
   if (req.body.password !== req.body.passwordConf) {
     var err = new Error('Passwords do not match.');
     err.status = 400;
-    res.send("passwords dont match");
-    return next(err);
+    return res.sendFile(path.join(__dirname + '/error/400.html'));
   }
 
   if (req.body.email &&
@@ -30,7 +27,7 @@ router.post('/', function (req, res, next) {
       username: req.body.username,
       password: req.body.password,
       passwordConf: req.body.passwordConf,
-    }
+    };
 
     User.create(userData, function (error, user) {
       if (error) {
@@ -46,7 +43,7 @@ router.post('/', function (req, res, next) {
       if (error || !user) {
         var err = new Error('Wrong email or password.');
         err.status = 401;
-        return next(err);
+        res.sendFile('401.html', { root: path.join(__dirname, '../public') });
       } else {
         req.session.userId = user._id;
         return res.redirect('/profile');
@@ -57,7 +54,7 @@ router.post('/', function (req, res, next) {
     err.status = 400;
     return next(err);
   }
-})
+});
 
 // GET route after registering
 router.get('/profile', function (req, res, next) {
@@ -71,7 +68,7 @@ router.get('/profile', function (req, res, next) {
           err.status = 400;
           return next(err);
         } else {
-          return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/logout">Logout</a>')
+          return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/logout">Logout</a>');
         }
       }
     });

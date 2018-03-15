@@ -69,17 +69,18 @@ a:hover{
     padding-bottom:0;
 }
 .navbar-logo{
-    max-width:20%;
-    max-height:20%;
 }
 .navbar-brand{
     font-family: $font-logo !important;
     font-size: $font-size-logo !important;
-    width:250px;
 }
 .navbar-brand{
     padding:0;
     margin:0;
+}
+.navbar-brand > img
+{
+    height:65px;
 }
 .nav-link{
     font-weight: $font-bold;
@@ -143,3 +144,8 @@ a:hover{
     background-color: $grey;
     border-color: $grey;
 }
+//Error Messages
+.ErrorMessage{
+    color: $red;
+}
+

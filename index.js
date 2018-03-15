@@ -53,25 +53,17 @@ app.use(express.static(__dirname + '/public/images'));
 var routes = require('./routes/router');
 app.use('/', routes);
 
-// catch 404 and forward to error handler
-/*app.use(function (req, res, next) {
+//catch 404 and forward to error handler
+app.use(function (req, res, next) {
   var err = new Error('File Not Found');
   err.status = 404;
   next(err);
-});*/
+});
 
-//Static Files
-/*app.use('/', express.static('public/'));
-app.use('/', express.static('public/html'));
-app.use('/', express.static('public/css'));
-app.use('/', express.static('public/images'));
-app.use('/', express.static('public/js'));
-app.use('/', express.static('public/userprofile'));
-app.use('/', express.static('model/'));
-app.use('/', express.static('db'));*/
+app.get('/', function(req,res) {
+    res.sendFile('/index.html');
+});
 
-
-app.get('/',(req,res) => res.sendFile('/index.html'));
 app.listen(3000, function() {
     console.log('This is working!');
 });
