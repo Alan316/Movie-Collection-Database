@@ -14,7 +14,8 @@ router.post('/', function (req, res, next) {
   if (req.body.password !== req.body.passwordConf) {
     var err = new Error('Passwords do not match.');
     err.status = 400;
-    return res.sendFile(path.join(__dirname + '/error/400.html'));
+    res.sendFile('400.html', { root: path.join(".", '/public/') });
+    //return next();
   }
 
   if (req.body.email &&
@@ -43,7 +44,7 @@ router.post('/', function (req, res, next) {
       if (error || !user) {
         var err = new Error('Wrong email or password.');
         err.status = 401;
-        res.sendFile('401.html', { root: path.join(__dirname, '../public') });
+        res.sendFile('401.html', { root: path.join(".", '/public/') });
       } else {
         req.session.userId = user._id;
         return res.redirect('/profile');
