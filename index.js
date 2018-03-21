@@ -11,6 +11,9 @@ var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 var url = 'mongodb://localhost:27017';
 
+//Set pat to Pug Templates
+app.set('views', __dirname + '/views');
+
 MongoClient.connect(url, function(err, client) {
     assert.equal(null, err);
     console.log("Connected successfully to server");

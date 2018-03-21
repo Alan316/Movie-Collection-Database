@@ -14,7 +14,6 @@ router.post('/', function (req, res, next) {
   if (req.body.password !== req.body.passwordConf) {
     var err = new Error('Passwords do not match.');
     err.status = 400;
-    //res.sendFile('400.html', { root: path.join(".", '/public') });
     return next(err);
   }
 
@@ -22,43 +21,44 @@ router.post('/', function (req, res, next) {
     req.body.username &&
     req.body.password &&
     req.body.passwordConf) {
+      var userData = {
+        email: req.body.email,
+        username: req.body.username,
+        password: req.body.password,
+        passwordConf: req.body.passwordConf,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        avatar: req.body.avatar,
+      };
 
-    var userData = {
-      email: req.body.email,
-      username: req.body.username,
-      password: req.body.password,
-      passwordConf: req.body.passwordConf,
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      avatar: req.body.avatar,
-    };
-
+    //If registration is correct, and account is created, temporarily return user data
+    //Eventually this will render a user file based on a template
     User.create(userData, function (error, user) {
       if (error) {
         return next(error);
       } else {
         req.session.userId = user._id;
-        return res.redirect('/profile');
+        return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="index.html">Logout</a>');
+        //return res.redirect('/profile/' + req.body.username); 
       }
     });
 
   } else if (req.body.logemail && req.body.logpassword) {
     User.authenticate(req.body.logemail, req.body.logpassword, function (error, user) {
       if (error || !user) {
-        var err = new Error('Wrong email or password.');
+        var err2 = new Error('Wrong email or password.');
         err.status = 401;
-        //res.sendFile('401.html', { root: path.join(".", '/public') });
-        //throw (err);
-        return next(err);     
+        return next(err2);     
       } else {
         req.session.userId = user._id;
-        return res.redirect('/profile');
+        return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="index.html">Logout</a>');
+        //return res.redirect('/profile');
       }
     });
   } else {
-    var err = new Error('All fields required.');
-    err.status = 400;
-    return next(err);
+    var err3 = new Error('All fields required.');
+    err3.status = 400;
+    return next(err3);
   }
 });
 
@@ -74,7 +74,9 @@ router.get('/profile', function (req, res, next) {
           err.status = 400;
           return next(err);
         } else {
-          return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/logout">Logout</a>');
+          //send registrant to their user page
+          //return res.redirect('/profile/' + req.body.username); 
+          return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/index.html">Logout</a>');
         }
       }
     });
