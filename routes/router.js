@@ -14,8 +14,8 @@ router.post('/', function (req, res, next) {
   if (req.body.password !== req.body.passwordConf) {
     var err = new Error('Passwords do not match.');
     err.status = 400;
-    res.sendFile('400.html', { root: path.join(".", '/public/') });
-    //return next();
+    //res.sendFile('400.html', { root: path.join(".", '/public') });
+    return next(err);
   }
 
   if (req.body.email &&
@@ -28,6 +28,9 @@ router.post('/', function (req, res, next) {
       username: req.body.username,
       password: req.body.password,
       passwordConf: req.body.passwordConf,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      avatar: req.body.avatar,
     };
 
     User.create(userData, function (error, user) {
@@ -44,7 +47,9 @@ router.post('/', function (req, res, next) {
       if (error || !user) {
         var err = new Error('Wrong email or password.');
         err.status = 401;
-        res.sendFile('401.html', { root: path.join(".", '/public/') });
+        //res.sendFile('401.html', { root: path.join(".", '/public') });
+        //throw (err);
+        return next(err);     
       } else {
         req.session.userId = user._id;
         return res.redirect('/profile');

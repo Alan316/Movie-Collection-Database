@@ -21,6 +21,16 @@ var UserSchema = new mongoose.Schema({
   passwordConf: {
     type: String,
     required: true,
+  },
+  avatar: {
+    type:String,
+  },
+  firstName: {
+    type:String,
+    required: true
+  },
+  lastName: {
+    type: String,
   }
 });
 

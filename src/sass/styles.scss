@@ -36,6 +36,7 @@ body {
     padding: 0x;
     background-color: $grey;
     font-family: $font-stack;
+    text-align: center;
 }
 #random {
   width:100%;
@@ -67,8 +68,6 @@ a:hover{
     margin-bottom: 0px;
     padding-top:0;
     padding-bottom:0;
-}
-.navbar-logo{
 }
 .navbar-brand{
     font-family: $font-logo !important;
@@ -145,7 +144,18 @@ a:hover{
     border-color: $grey;
 }
 //Error Messages
-.ErrorMessage{
+.errorMessage{
+    text-align: center;
     color: $red;
+    font-family: $font-stack;
+    font-size: 2vw;
+    font-weight: $font-bold;
+}
+.errorBody{
+    text-align: center;
+    font-weight: $font-bold;
+    color: $black;
+    background-color: $white;
+    font-family: $font-stack;
 }
 

@@ -21,7 +21,8 @@ body {
   margin: 0;
   padding: 0x;
   background-color: #B3B3B3;
-  font-family: Roboto, Arial, Helvetica, sans-serif; }
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  text-align: center; }
 
 #random {
   width: 100%;
@@ -121,7 +122,18 @@ a:hover {
   background-color: #B3B3B3;
   border-color: #B3B3B3; }
 
-.ErrorMessage {
-  color: #8b0000; }
+.errorMessage {
+  text-align: center;
+  color: #8b0000;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 2vw;
+  font-weight: 800; }
+
+.errorBody {
+  text-align: center;
+  font-weight: 800;
+  color: #000000;
+  background-color: #FFFFFF;
+  font-family: Roboto, Arial, Helvetica, sans-serif; }
 
 /*# sourceMappingURL=styles.css.map */
