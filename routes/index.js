@@ -38,7 +38,7 @@ router.post('/', function (req, res, next) {
         return next(error);
       } else {
         req.session.userId = user._id;
-        return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="index">Logout</a>');
+        return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/">Logout</a>');
         //return res.redirect('/profile/' + req.body.username); 
       }
     });
@@ -51,7 +51,7 @@ router.post('/', function (req, res, next) {
         return next(err2);     
       } else {
         req.session.userId = user._id;
-        return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="index.html">Logout</a>');
+        return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/">Logout</a>');
         //return res.redirect('/profile');
       }
     });
@@ -76,7 +76,7 @@ router.get('/', function (req, res, next) {
         } else {
           //send registrant to their user page
           //return res.redirect('/profile/' + req.body.username); 
-          return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button">Logout</a>');
+          return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/">Logout</a>');
         }
       }
     });
@@ -90,7 +90,7 @@ router.get('/logout', function (req, res, next) {
       if (err) {
         return next(err);
       } else {
-        return res.redirect('index');
+        return res.redirect('/');
       }
     });
   }

@@ -6,7 +6,11 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
-//MongoDB
+// requiring routes
+//var indexRoutes = require("./routes/index")
+var indexRoutes = require('./routes/index');
+
+//MongoDB - Connect to Database and Check for Errors
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 var url = 'mongodb://localhost:27017';
@@ -18,16 +22,20 @@ db.once('open', function() {
     console.log ("The Mongoose is connected");
 });
 
-//Set View Engine and Path
-app.set('view engine', 'pug');
-app.set('views', __dirname + '/views');
-
-
 MongoClient.connect(url, function(err, client) {
     assert.equal(null, err);
     console.log("Connected successfully to server");
 client.close();
 });
+
+
+//Set View Engine and Path
+app.set('view engine', 'pug');
+//app.set('views', __dirname + '/views');
+app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + '/public/css'));
+app.use(express.static(__dirname + '/public/js'));
+app.use(express.static(__dirname + '/public/images'));
 
 
 //use sessions for tracking logins
@@ -44,16 +52,9 @@ app.use(session({
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// serve static files from template
-app.use(express.static(__dirname + '/public'));
-app.use(express.static(__dirname + '/public/css'));
-app.use(express.static(__dirname + '/public/js'));
-app.use(express.static(__dirname + '/public/images'));
-
 // include routes
-var routes = require('./routes/router');
-app.use('/', routes);
-
+app.use("/", indexRoutes);
+ 
 //catch 404 and forward to error handler
 app.use(function (req, res, next) {
   var err = new Error('File Not Found');
