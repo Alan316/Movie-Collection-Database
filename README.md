@@ -1,4 +1,4 @@
-# MovieLogue
+# Movie Collection Database (MCDB)
 DVD and digital film collection cataloging app built in Node.JS using MongoDB, Express, and Bootstrap 4.0 with my customized edits
 
 This app will allow users to do the following:

@@ -24,12 +24,12 @@ module.exports = {
         ]
     },
 
-    pug: {
+    /*pug: {
         files: [
             'views/*.pug'
         ],
         tasks: [
             'pug:prod'
         ]
-    },
+    },*/
 };

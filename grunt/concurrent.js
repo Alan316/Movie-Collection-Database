@@ -25,10 +25,6 @@ module.exports = {
         'sass:prod',
         'uglify'
     ],
-    prodThird: [
-        'pug',
-        'uglify'
-    ],
 
     // Image tasks
     imgFirst: [

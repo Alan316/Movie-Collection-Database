@@ -1,4 +1,4 @@
-module.exports = {
+/*module.exports = {
     // Production settings
     prod: {
         options: { pretty: true },
@@ -10,4 +10,4 @@ module.exports = {
             ext: '.html',
         }]
     }
-};
+};*/
