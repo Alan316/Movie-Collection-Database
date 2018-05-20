@@ -1,8 +1,8 @@
 {
-  "name": "movielogue",
-  "version": "0.0.1",
+  "name": "Movie-Collection-Database",
+  "version": "0.0.2",
   "description": "A Node.JS/MongoDB app for cataloging Your Physical and Digital movie collection",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
     "express": "^4.16.2",
     "grunt-concurrent": "^2.3.1",
