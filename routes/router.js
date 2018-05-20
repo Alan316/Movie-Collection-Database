@@ -4,8 +4,8 @@ var path = require('path');
 var User = require('../models/user');
 
 // GET route for reading data
-router.get('/', function (req, res, next) {
-  return res.sendFile(path.join(__dirname + 'index.html'));
+router.get("/", (req, res) => {
+  res.render("index");
 });
 
 //POST route for updating data
@@ -38,7 +38,7 @@ router.post('/', function (req, res, next) {
         return next(error);
       } else {
         req.session.userId = user._id;
-        return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="index.html">Logout</a>');
+        return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="index">Logout</a>');
         //return res.redirect('/profile/' + req.body.username); 
       }
     });
@@ -63,7 +63,7 @@ router.post('/', function (req, res, next) {
 });
 
 // GET route after registering
-router.get('/profile', function (req, res, next) {
+router.get('/', function (req, res, next) {
   User.findById(req.session.userId)
     .exec(function (error, user) {
       if (error) {
@@ -76,7 +76,7 @@ router.get('/profile', function (req, res, next) {
         } else {
           //send registrant to their user page
           //return res.redirect('/profile/' + req.body.username); 
-          return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/index.html">Logout</a>');
+          return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button">Logout</a>');
         }
       }
     });
@@ -90,7 +90,7 @@ router.get('/logout', function (req, res, next) {
       if (err) {
         return next(err);
       } else {
-        return res.redirect('/');
+        return res.redirect('index');
       }
     });
   }

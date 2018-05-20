@@ -10,25 +10,23 @@ var MongoStore = require('connect-mongo')(session);
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 var url = 'mongodb://localhost:27017';
+var mongoDB = 'mongodb://localhost/MovieLogue_User';
+mongoose.connect(mongoDB);
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error'));
+db.once('open', function() {
+    console.log ("The Mongoose is connected");
+});
 
-//Set pat to Pug Templates
+//Set View Engine and Path
+app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');
+
 
 MongoClient.connect(url, function(err, client) {
     assert.equal(null, err);
     console.log("Connected successfully to server");
 client.close();
-});
-
-
-//Mongoose
-var mongoDB = 'mongodb://localhost/TEST';
-mongoose.connect(mongoDB);
-var db = mongoose.connection;
-//Error Handling with Mongoose
-db.on('error', console.error.bind(console, 'connection error'));
-db.once('open', function() {
-    console.log ("The Mongoose is connected");
 });
 
 
@@ -61,10 +59,6 @@ app.use(function (req, res, next) {
   var err = new Error('File Not Found');
   err.status = 404;
   next(err);
-});
-
-app.get('/', function(req,res) {
-    res.sendFile('/index.html');
 });
 
 app.listen(3000, function() {
