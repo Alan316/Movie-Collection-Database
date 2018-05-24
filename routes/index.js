@@ -32,7 +32,7 @@ router.post('/', function (req, res, next) {
       };
 
     //If registration is correct, and account is created, temporarily return user data
-    //Eventually this will render a user file based on a template
+    //Eventually this will render a user profile based on a template
     User.create(userData, function (error, user) {
       if (error) {
         return next(error);
