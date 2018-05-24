@@ -34,8 +34,8 @@ router.post('/', function (req, res, next) {
     //If registration is correct, and account is created, temporarily return user data
     //Eventually this will render a user profile based on a template
     User.create(userData, function (error, user) {
-      if (error) {
-        return next(error);
+      if (err) {
+        return next(err);
       } else {
         req.session.userId = user._id;
         return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/">Logout</a>');
@@ -43,11 +43,11 @@ router.post('/', function (req, res, next) {
       }
     });
 
-  } else if (req.body.logemail && req.body.logpassword) {
-    User.authenticate(req.body.logemail, req.body.logpassword, function (error, user) {
+  } else if (req.body.loguser && req.body.logpassword) {
+    User.authenticate(req.body.loguser, req.body.logpassword, function (error, user) {
       if (error || !user) {
-        var err2 = new Error('Wrong email or password.');
-        err.status = 401;
+        var err2 = new Error('Wrong username or password.');
+        err2.status = 401;
         return next(err2);     
       } else {
         req.session.userId = user._id;
@@ -56,14 +56,14 @@ router.post('/', function (req, res, next) {
       }
     });
   } else {
-    var err3 = new Error('All fields required.');
-    err3.status = 400;
-    return next(err3);
+      var err3 = new Error('All fields required.');
+      err3.status = 400;
+      return next(err3);
   }
 });
 
 // GET route after registering
-router.get('/', function (req, res, next) {
+/*router.get('/', function (req, res, next) {
   User.findById(req.session.userId)
     .exec(function (error, user) {
       if (error) {
@@ -80,7 +80,7 @@ router.get('/', function (req, res, next) {
         }
       }
     });
-});
+});*/
 
 // GET for logout logout
 router.get('/logout', function (req, res, next) {
