@@ -50,9 +50,9 @@ router.post('/', function (req, res, next) {
         err2.status = 401;
         return next(err2);     
       } else {
-        req.session.userId = user._id;
-        return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/">Logout</a>');
-        //return res.redirect('/profile');
+          req.session.userId = user._id;
+          //return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/">Logout</a>');
+          res.render('./userprofile', {user: user.username});
       }
     });
   } else {

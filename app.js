@@ -1,10 +1,10 @@
 //Express
-var express = require('express');
-var app = express();
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-var session = require('express-session');
-var MongoStore = require('connect-mongo')(session);
+var express         = require('express'),
+    app             = express(),
+    bodyParser      = require('body-parser'),
+    mongoose        = require('mongoose'),
+    session         = require('express-session'),
+    MongoStore      = require('connect-mongo')(session);
 
 // requiring routes
 //var indexRoutes = require("./routes/index")
@@ -47,6 +47,7 @@ app.use(session({
       mongooseConnection: db
     })
   }));
+
 
 // parse incoming requests
 app.use(bodyParser.json());
