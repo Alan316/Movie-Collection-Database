@@ -33,6 +33,7 @@ var UserSchema = new mongoose.Schema({
   },
   avatar: {
     type:String,
+    trim: true
   },
   firstName: {
     type:String,

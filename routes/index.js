@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var path = require('path');
-var User = require('../models/user');
+var express = require('express'),
+    router = express.Router(),
+    path = require('path'),
+    User = require('../models/user');
 
 // GET route for reading data
 router.get("/", (req, res) => {
@@ -31,15 +31,14 @@ router.post('/', function (req, res, next) {
         avatar: req.body.avatar,
       };
 
-    //If registration is correct, and account is created, temporarily return user data
-    //Eventually this will render a user profile based on a template
+    //If registration is correct, and account is created, temporarily return profile page
     User.create(userData, function (error, user) {
       if (err) {
         return next(err);
       } else {
         req.session.userId = user._id;
-        return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/">Logout</a>');
-        //return res.redirect('/profile/' + req.body.username); 
+        //return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/">Logout</a>');
+        res.render('./userprofile', {user: user.username, fName: user.firstName, avatarURL: user.avatar});
       }
     });
 
@@ -52,7 +51,7 @@ router.post('/', function (req, res, next) {
       } else {
           req.session.userId = user._id;
           //return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/">Logout</a>');
-          res.render('./userprofile', {user: user.username});
+          res.render('./userprofile', {user: user.username, fName: user.firstName, avatarURL: user.avatar});
       }
     });
   } else {
