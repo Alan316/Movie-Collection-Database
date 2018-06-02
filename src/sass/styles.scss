@@ -1,18 +1,23 @@
 $font-logo: Passion One, Arial, Helvetica, sans-serif;
-$font-size-logo: 2rem;
 $font-stack: Roboto, Arial, Helvetica, sans-serif;
 $font-bold: 800;
+
+$font-size-menu: 1rem;
 
 $red: #8b0000;
 $blue: #104e8b;
 $white: #FFFFFF;
 $grey-dark: #262626;
 $grey: #B3B3B3;
+$light-grey: #eeeeee;
 $black: #000000;
 
 //color classes
 .blue{
     color: $blue!important;
+}
+.nav-grey{
+    color: rgba(0,0,0,.5);
 }
 .bgWhite{
     background-color:$white;
@@ -27,6 +32,7 @@ $black: #000000;
 }
 .container {
     max-width:1140px;
+    padding:0;
 }
 .white-space {
     white-space:pre;
@@ -52,7 +58,6 @@ body {
    display: block;
 }
 .container-fluid {
-    padding:0; //Remove padding from bootstrap 4 fluid navbar
     margin:0;
 }
 //Navbar Styles
@@ -62,19 +67,18 @@ a{
 a:hover{
     color:$grey;
 }
+.navbar-light .navbar-toggler{
+    border-color: rgba(0,0,0,.0);
+    padding:.5px;
+}
 .navbar{
     background-color: $white;
     margin-top: 0;
     margin-bottom: 0px;
-    padding-top:0;
-    padding-bottom:0;
+    padding:0px;
 }
 .navbar-brand{
-    font-family: $font-logo !important;
-    font-size: $font-size-logo !important;
-}
-.navbar-brand{
-    padding:0;
+    padding:6px;
     margin:0;
 }
 .navbar-brand > img
@@ -82,12 +86,24 @@ a:hover{
     height:60px;
     padding:2.5px;
 }
+.user-avatar{
+    height:53px;
+    padding:4px;
+}
 .nav-link{
     font-weight: $font-bold;
+    font-size: $font-size-menu;
     color: $blue;
 }
 .navlink:hover{
     color: $grey;
+}
+.nav-Font{
+    font-size: $font-size-menu;
+}
+div.navbar-collapse{
+    padding:6px;
+    background-color: $light-grey;
 }
 //End of Navigation
 //Login Window
@@ -144,19 +160,14 @@ a:hover{
     background-color: $grey;
     border-color: $grey;
 }
-//Error Messages
-.errorMessage{
-    text-align: center;
-    color: $red;
-    font-family: $font-stack;
-    font-size: 2vw;
-    font-weight: $font-bold;
+@media (max-width: 480px) {
+    .container {
+       padding:0;
+    }
+    #userName {
+        display:none;
+    }
+    .user-avatar{
+        padding:1;
+    }
 }
-.errorBody{
-    text-align: center;
-    font-weight: $font-bold;
-    color: $black;
-    background-color: $white;
-    font-family: $font-stack;
-}
-

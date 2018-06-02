@@ -1,6 +1,9 @@
 .blue {
   color: #104e8b !important; }
 
+.nav-grey {
+  color: rgba(0, 0, 0, 0.5); }
+
 .bgWhite {
   background-color: #FFFFFF; }
 
@@ -12,7 +15,8 @@
   padding: 10px; }
 
 .container {
-  max-width: 1140px; }
+  max-width: 1140px;
+  padding: 0; }
 
 .white-space {
   white-space: pre; }
@@ -38,7 +42,6 @@ body {
   display: block; }
 
 .container-fluid {
-  padding: 0;
   margin: 0; }
 
 a {
@@ -47,31 +50,42 @@ a {
 a:hover {
   color: #B3B3B3; }
 
+.navbar-light .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0);
+  padding: .5px; }
+
 .navbar {
   background-color: #FFFFFF;
   margin-top: 0;
   margin-bottom: 0px;
-  padding-top: 0;
-  padding-bottom: 0; }
+  padding: 0px; }
 
 .navbar-brand {
-  font-family: Passion One, Arial, Helvetica, sans-serif !important;
-  font-size: 2rem !important; }
-
-.navbar-brand {
-  padding: 0;
+  padding: 6px;
   margin: 0; }
 
 .navbar-brand > img {
   height: 60px;
   padding: 2.5px; }
 
+.user-avatar {
+  height: 53px;
+  padding: 4px; }
+
 .nav-link {
   font-weight: 800;
+  font-size: 1rem;
   color: #104e8b; }
 
 .navlink:hover {
   color: #B3B3B3; }
+
+.nav-Font {
+  font-size: 1rem; }
+
+div.navbar-collapse {
+  padding: 6px;
+  background-color: #eeeeee; }
 
 .containerLogin {
   margin: 0;
@@ -123,18 +137,12 @@ a:hover {
   background-color: #B3B3B3;
   border-color: #B3B3B3; }
 
-.errorMessage {
-  text-align: center;
-  color: #8b0000;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-size: 2vw;
-  font-weight: 800; }
-
-.errorBody {
-  text-align: center;
-  font-weight: 800;
-  color: #000000;
-  background-color: #FFFFFF;
-  font-family: Roboto, Arial, Helvetica, sans-serif; }
+@media (max-width: 480px) {
+  .container {
+    padding: 0; }
+  #userName {
+    display: none; }
+  .user-avatar {
+    padding: 1; } }
 
 /*# sourceMappingURL=styles.css.map */
