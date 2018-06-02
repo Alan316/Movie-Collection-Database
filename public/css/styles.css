@@ -1,1 +1,140 @@
-.blue{color:#104e8b !important}.bgWhite{background-color:#fff}.fontBold{font-weight:800}.centerText{text-align:center;padding:10px}.container{max-width:1140px}.white-space{white-space:pre}body{margin:0;padding:0x;background-color:#B3B3B3;font-family:Roboto,Arial,Helvetica,sans-serif;text-align:center}#random{width:100%;height:100vh;background-image:url("");background-position:center center;background-size:cover;background-repeat:no-repeat}.h5{font-family:Passion One,Arial,Helvetica,sans-serif !important;font-weight:800 !important;display:block}.container-fluid{padding:0;margin:0}a{color:#104e8b}a:hover{color:#B3B3B3}.navbar{background-color:#fff;margin-top:0;margin-bottom:0px;padding-top:0;padding-bottom:0}.navbar-brand{font-family:Passion One,Arial,Helvetica,sans-serif !important;font-size:2rem !important}.navbar-brand{padding:0;margin:0}.navbar-brand>img{height:65px}.nav-link{font-weight:800;color:#104e8b}.navlink:hover{color:#B3B3B3}.containerLogin{margin:0;position:absolute;top:50%;transform:translate(0, -50%)}.loginBox{width:100%;text-align:center;padding:10px;font-weight:800;position:absolute;top:54%;transform:translate(0, -50%);font-size:2em}.loginBoxOuter{padding:5px;max-width:543px;min-width:302px;background-color:#fff;margin:0 auto;border-radius:15px}.loginBoxInner{padding:10px;max-width:540px;min-width:300px;background-color:#fff;border-radius:15px;border:3px solid #B3B3B3}.form-group{padding-top:15px;padding-bottom:0}.hide{display:none}.show{display:block}.btn-primary{background-color:#104e8b;border-color:#104e8b}.btn-primary:hover{background-color:#B3B3B3;border-color:#B3B3B3}.errorMessage{text-align:center;color:darkred;font-family:Roboto,Arial,Helvetica,sans-serif;font-size:2vw;font-weight:800}.errorBody{text-align:center;font-weight:800;color:#000;background-color:#fff;font-family:Roboto,Arial,Helvetica,sans-serif}
+.blue {
+  color: #104e8b !important; }
+
+.bgWhite {
+  background-color: #FFFFFF; }
+
+.fontBold {
+  font-weight: 800; }
+
+.centerText {
+  text-align: center;
+  padding: 10px; }
+
+.container {
+  max-width: 1140px; }
+
+.white-space {
+  white-space: pre; }
+
+body {
+  margin: 0;
+  padding: 0x;
+  background-color: #B3B3B3;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  text-align: center; }
+
+#random {
+  width: 100%;
+  height: 100vh;
+  background-image: url("");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.h5 {
+  font-family: Passion One, Arial, Helvetica, sans-serif !important;
+  font-weight: 800 !important;
+  display: block; }
+
+.container-fluid {
+  padding: 0;
+  margin: 0; }
+
+a {
+  color: #104e8b; }
+
+a:hover {
+  color: #B3B3B3; }
+
+.navbar {
+  background-color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 0px;
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.navbar-brand {
+  font-family: Passion One, Arial, Helvetica, sans-serif !important;
+  font-size: 2rem !important; }
+
+.navbar-brand {
+  padding: 0;
+  margin: 0; }
+
+.navbar-brand > img {
+  height: 60px;
+  padding: 2.5px; }
+
+.nav-link {
+  font-weight: 800;
+  color: #104e8b; }
+
+.navlink:hover {
+  color: #B3B3B3; }
+
+.containerLogin {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%); }
+
+.loginBox {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-weight: 800;
+  position: absolute;
+  top: 54%;
+  transform: translate(0, -50%);
+  font-size: 2em; }
+
+.loginBoxOuter {
+  padding: 5px;
+  max-width: 543px;
+  min-width: 302px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  border-radius: 15px; }
+
+.loginBoxInner {
+  padding: 10px;
+  max-width: 540px;
+  min-width: 300px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  border: 3px solid #B3B3B3; }
+
+.form-group {
+  padding-top: 15px;
+  padding-bottom: 0; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
+.btn-primary {
+  background-color: #104e8b;
+  border-color: #104e8b; }
+
+.btn-primary:hover {
+  background-color: #B3B3B3;
+  border-color: #B3B3B3; }
+
+.errorMessage {
+  text-align: center;
+  color: #8b0000;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 2vw;
+  font-weight: 800; }
+
+.errorBody {
+  text-align: center;
+  font-weight: 800;
+  color: #000000;
+  background-color: #FFFFFF;
+  font-family: Roboto, Arial, Helvetica, sans-serif; }
+
+/*# sourceMappingURL=styles.css.map */
