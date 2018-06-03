@@ -12,13 +12,11 @@ function RandomImage()
     "url('movie-background7.jpg')",
     "url('movie-background8.jpg')",];
   //Removed images for cell phone. No reason to Have Them. Grey is displayed in background now. Will figure out how to beautify this later
-  var smallImage= 
-    "";
 
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
     document.getElementById("random").style.backgroundImage=smallImage[random];
 }
-  else
+else
     document.getElementById("random").style.backgroundImage=bigImage[random];
 }
 

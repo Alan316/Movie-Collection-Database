@@ -2,11 +2,11 @@ doctype
 html  
     head
         include templates/header-template.pug
-    body(onLoad='RandomImage()') 
+    body#random(onLoad='RandomImage()')
         include templates/navbar-nologin-template.pug
-
+    
         div.containerFluid.show#loadLogin
-            div.containerLogin#random
+            div.containerLogin#login-box-position
                 div.loginBox.centerText
                     div.loginBoxOuter
                         div.loginBoxInner
@@ -25,7 +25,7 @@ html
 
                         
         div.containerFluid.hide#loadRegister
-            div.containerLogin#random
+            div.containerLogin#login-box-position
                 div.loginBox.centerText
                     div.loginBoxOuter
                         div.loginBoxInner

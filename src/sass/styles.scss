@@ -6,21 +6,31 @@ $font-size-menu: 1rem;
 
 $red: #8b0000;
 $blue: #104e8b;
+$blue-light: #8591ba;
 $white: #FFFFFF;
 $grey-dark: #262626;
 $grey: #B3B3B3;
 $light-grey: #eeeeee;
 $black: #000000;
 
+@mixin absolute-center(){
+    width:100%;
+    height:100vh;
+    background-image:url('');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+
 //color classes
 .blue{
     color: $blue!important;
 }
-.nav-grey{
-    color: rgba(0,0,0,.5);
-}
 .bgWhite{
     background-color:$white;
+}
+.bgLightBlue{
+    background-color: $blue-light;
 }
 //color classes end
 .fontBold{
@@ -44,13 +54,12 @@ body {
     font-family: $font-stack;
     text-align: center;
 }
-#random {
-  width:100%;
-  height:100vh;
-  background-image:url('');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;  
+#random{
+    z-index:-100;
+    @include absolute-center;
+}
+#login-box-position {
+    @include absolute-center;
 }
 .h5 {
    font-family: $font-logo !important;
@@ -60,13 +69,14 @@ body {
 .container-fluid {
     margin:0;
 }
-//Navbar Styles
+//Links
 a{
     color: $blue;
 }
 a:hover{
     color:$grey;
 }
+//Navbar Styles
 .navbar-light .navbar-toggler{
     border-color: rgba(0,0,0,.0);
     padding:.5px;
@@ -93,7 +103,6 @@ a:hover{
 .nav-link{
     font-weight: $font-bold;
     font-size: $font-size-menu;
-    color: $blue;
 }
 .navlink:hover{
     color: $grey;
@@ -101,9 +110,8 @@ a:hover{
 .nav-Font{
     font-size: $font-size-menu;
 }
-div.navbar-collapse{
+.navbar-collapse{
     padding:6px;
-    background-color: $light-grey;
 }
 //End of Navigation
 //Login Window
@@ -137,7 +145,7 @@ div.navbar-collapse{
     min-width:300px;
     background-color: $white;
     border-radius: 15px;
-    border:3px solid $grey;
+    border:3px solid $blue-light;
 }
 .form-group{
     padding-top:15px;
@@ -157,9 +165,10 @@ div.navbar-collapse{
     border-color: $blue;
 }
 .btn-primary:hover{
-    background-color: $grey;
-    border-color: $grey;
+    background-color: $blue-light;
+    border-color: $blue-light;
 }
+
 @media (max-width: 480px) {
     .container {
        padding:0;
