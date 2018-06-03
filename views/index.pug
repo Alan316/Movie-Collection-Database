@@ -3,13 +3,13 @@ html
     head
         include templates/header-template.pug
     body#random(onLoad='RandomImage()')
-        include templates/navbar-nologin-template.pug
     
         div.containerFluid.show#loadLogin
             div.containerLogin#login-box-position
                 div.loginBox.centerText
                     div.loginBoxOuter
                         div.loginBoxInner
+                            img(src='ML_Logo.png').logo
                             h5.grey-dark Track your physical and digital film collection.
                                 div.form-group
                                     form(action='/' method="post")
@@ -29,7 +29,8 @@ html
                 div.loginBox.centerText
                     div.loginBoxOuter
                         div.loginBoxInner
-                            h5.grey-dark Complete this form to register for MovieLogue
+                            img(src='ML_Logo.png').logo
+                            h5.grey-dark Complete this form to register.
                                 div.form-group
                                     form(action='/' method="post")
                                         label(for='email') 

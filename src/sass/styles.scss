@@ -115,6 +115,10 @@ a:hover{
 }
 //End of Navigation
 //Login Window
+.logo {
+    padding:6px;
+    height:80px;
+}
 .containerLogin{
     margin: 0;
     position: absolute;               
@@ -127,7 +131,7 @@ a:hover{
     padding:10px;
     font-weight: $font-bold;
     position: absolute;               
-    top: 54%;                         
+    top: 50%;                         
     transform: translate(0, -50%); 
     font-size:2em;
 }

@@ -94,6 +94,10 @@ a:hover {
 .navbar-collapse {
   padding: 6px; }
 
+.logo {
+  padding: 6px;
+  height: 80px; }
+
 .containerLogin {
   margin: 0;
   position: absolute;
@@ -106,7 +110,7 @@ a:hover {
   padding: 10px;
   font-weight: 800;
   position: absolute;
-  top: 54%;
+  top: 50%;
   transform: translate(0, -50%);
   font-size: 2em; }
 
