@@ -10,7 +10,7 @@ $blue-light: #8591ba;
 $white: #FFFFFF;
 $grey-dark: #262626;
 $grey: #B3B3B3;
-$light-grey: #eeeeee;
+$grey-light: #eeeeee;
 $black: #000000;
 
 @mixin absolute-center(){
@@ -24,12 +24,15 @@ $black: #000000;
 
 //color classes
 .blue{
-    color: $blue!important;
+    color: $blue;
 }
 .bgWhite{
     background-color:$white;
 }
-.bgLightBlue{
+.bgGreyLight{
+    background-color:$grey-light;
+}
+.bgBlueLight{
     background-color: $blue-light;
 }
 //color classes end
@@ -74,12 +77,18 @@ a{
     color: $blue;
 }
 a:hover{
-    color:$grey;
+    color:$blue-light;
 }
 //Navbar Styles
 .navbar-light .navbar-toggler{
     border-color: rgba(0,0,0,.0);
     padding:.5px;
+}
+button:focus{
+    outline: rgba(0,0,0,.0);
+}
+.blue:hover{
+    color: $blue-light;
 }
 .navbar{
     background-color: $white;
@@ -97,15 +106,17 @@ a:hover{
     padding:2.5px;
 }
 .user-avatar{
-    height:53px;
-    padding:4px;
+    height:56px;
 }
 .nav-link{
     font-weight: $font-bold;
     font-size: $font-size-menu;
 }
-.navlink:hover{
-    color: $grey;
+.navbar-light .navbar-nav .nav-link{
+    color: $blue;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+    color: $blue-light;
 }
 .nav-Font{
     font-size: $font-size-menu;
@@ -128,7 +139,7 @@ a:hover{
 .loginBox{
     width: 100%;
     text-align:center;
-    padding:10px;
+    padding:6px;
     font-weight: $font-bold;
     position: absolute;               
     top: 50%;                         
@@ -139,17 +150,19 @@ a:hover{
     padding:5px;
     max-width:543px;
     min-width:302px;
-    background-color: $white;
+    //background-color: $blue;
     margin:0 auto;
     border-radius: 15px;
+    //box-shadow: 2px 2px 12px rgba(0,0,0,.4);
 }
 .loginBoxInner{
-    padding:10px;
+    padding:8px;
     max-width:540px;
     min-width:300px;
     background-color: $white;
     border-radius: 15px;
-    border:3px solid $blue-light;
+    //border:3px solid $blue;
+
 }
 .form-group{
     padding-top:15px;

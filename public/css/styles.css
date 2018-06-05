@@ -1,10 +1,13 @@
 .blue {
-  color: #104e8b !important; }
+  color: #104e8b; }
 
 .bgWhite {
   background-color: #FFFFFF; }
 
-.bgLightBlue {
+.bgGreyLight {
+  background-color: #eeeeee; }
+
+.bgBlueLight {
   background-color: #8591ba; }
 
 .fontBold {
@@ -57,11 +60,17 @@ a {
   color: #104e8b; }
 
 a:hover {
-  color: #B3B3B3; }
+  color: #8591ba; }
 
 .navbar-light .navbar-toggler {
   border-color: rgba(0, 0, 0, 0);
   padding: .5px; }
+
+button:focus {
+  outline: rgba(0, 0, 0, 0); }
+
+.blue:hover {
+  color: #8591ba; }
 
 .navbar {
   background-color: #FFFFFF;
@@ -78,15 +87,17 @@ a:hover {
   padding: 2.5px; }
 
 .user-avatar {
-  height: 53px;
-  padding: 4px; }
+  height: 56px; }
 
 .nav-link {
   font-weight: 800;
   font-size: 1rem; }
 
-.navlink:hover {
-  color: #B3B3B3; }
+.navbar-light .navbar-nav .nav-link {
+  color: #104e8b; }
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #8591ba; }
 
 .nav-Font {
   font-size: 1rem; }
@@ -107,7 +118,7 @@ a:hover {
 .loginBox {
   width: 100%;
   text-align: center;
-  padding: 10px;
+  padding: 6px;
   font-weight: 800;
   position: absolute;
   top: 50%;
@@ -118,17 +129,15 @@ a:hover {
   padding: 5px;
   max-width: 543px;
   min-width: 302px;
-  background-color: #FFFFFF;
   margin: 0 auto;
   border-radius: 15px; }
 
 .loginBoxInner {
-  padding: 10px;
+  padding: 8px;
   max-width: 540px;
   min-width: 300px;
   background-color: #FFFFFF;
-  border-radius: 15px;
-  border: 3px solid #8591ba; }
+  border-radius: 15px; }
 
 .form-group {
   padding-top: 15px;

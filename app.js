@@ -51,11 +51,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // include routes
 app.use("/", indexRoutes);
  
-//catch 404 and forward to error handler
+//catch 404 and render 404 page
 app.use(function (req, res, next) {
-  var err = new Error('File Not Found');
-  err.status = 404;
-  next(err);
+  res.status(404);
+  if (req.accepts('html')) {
+    res.render('error/404', { title: '404 Error.' });
+    return;
+  }
 });
 
 //Port is working on Localhost

@@ -3,16 +3,18 @@ nav.navbar.navbar-light.nav-layer
         a(href='#').navbar-brand.white-space
             img(src='ML_Logo.png').navbar-logo
         button.navbar-toggler.navbar-toggler-right(type=button, data-toggle="collapse", data-target="#navbar-user-profile", aria-controls="navbarContent", aria-expanded="true" aria-label="Toggle navigation") 
-                span.fontBold.nav-grey.nav-Font#userName !{user}  
+                span.fontBold.blue.nav-Font#userName !{user}  
                 img(src=avatarURL).user-avatar
-    div.collapse.navbar-collapse.bgLightBlue#navbar-user-profile
-        ul.navbar-nav.ml-auto
-            li.nav-item.ml-auto
-                a(href='#').nav-link#Profile Profile
-            li.nav-item.ml-auto
-                a(href='#').nav-link#viewCollection Collection 
-            li.nav-item.ml-auto
-                a(href='/logout').nav-link#viewLogout Logout
+    div.collapse.navbar-collapse.bgGreyLight#navbar-user-profile
+        div.container
+            ul.navbar-nav.ml-auto
+                li.nav-item.ml-auto
+                    a(href='#').nav-link#Profile Profile
+                li.nav-item.ml-auto
+                    a(href='#').nav-link#viewCollection Collection 
+                li.nav-item.ml-auto
+                    a(href='/logout').nav-link#viewLogout 
+                        button.btn.btn-primary Logout
    
 
 
